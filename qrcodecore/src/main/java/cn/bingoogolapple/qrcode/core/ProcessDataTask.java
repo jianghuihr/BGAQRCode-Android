@@ -106,7 +106,6 @@ class ProcessDataTask extends AsyncTask<Void, Void, ScanResult> {
             return qrCodeView.processBitmapData(BGAQRCodeUtil.getDecodeAbleBitmap(mPicturePath));
         } else if (mBitmap != null) {
             ScanResult result = qrCodeView.processBitmapData(mBitmap);
-            mBitmap = null;
             return result;
         } else {
             if (BGAQRCodeUtil.isDebug()) {
